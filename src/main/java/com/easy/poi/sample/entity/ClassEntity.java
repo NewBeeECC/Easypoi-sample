@@ -12,6 +12,8 @@ import cn.afterturn.easypoi.excel.annotation.ExcelTarget;
 public class ClassEntity {
     @Excel(name = "班级名称")
     private String name;
+    @Excel(name = "班级人数")
+    private Integer num;
 
     public String getName() {
         return name;
@@ -19,5 +21,13 @@ public class ClassEntity {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Integer getNum() {
+        return num;
+    }
+
+    public void setNum(Integer num) {
+        this.num = num;
     }
 }

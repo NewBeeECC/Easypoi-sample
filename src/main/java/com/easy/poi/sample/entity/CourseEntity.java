@@ -23,7 +23,7 @@ public class CourseEntity implements Serializable {
     private String name;
 
     private TeacherEntity majorTeacher;
-    @ExcelEntity(id = "absent")
+    @ExcelEntity(id = "major",name = "教师")
     private TeacherEntity absentTeacher;
 
     @ExcelCollection(name = "学生")

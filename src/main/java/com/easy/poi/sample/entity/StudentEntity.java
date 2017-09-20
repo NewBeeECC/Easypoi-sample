@@ -21,7 +21,7 @@ public class StudentEntity implements Serializable {
     private String id;
     @Excel(name = "学生姓名",width = 30,needMerge = true)
     private String name;
-    @Excel(name = "性别",replace = {"男_1","女_0"})
+    @Excel(name = "性别",replace = {"男_1","女_0"},suffix = "生")
     private int sex;
     @Excel(name = "出生日期", databaseFormat = "yyyyMMddHHmmss", format = "yyyy-MM-dd",width = 30,isImportField = "true_st")
     private Date borthday;
