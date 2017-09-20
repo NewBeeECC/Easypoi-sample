@@ -36,6 +36,8 @@ public class CustomController {
         entity.add(sex);
         //第三列角色
         ExcelExportEntity roles = new ExcelExportEntity(null, "roles");
+        roles.setName("角色");
+        roles.setWrap(true);
         List<ExcelExportEntity> temp = new ArrayList<>();
         temp.add(new ExcelExportEntity("角色名", "roleName"));
         temp.add(new ExcelExportEntity("角色值", "roleValue"));
