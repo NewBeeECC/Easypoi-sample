@@ -78,4 +78,16 @@ public class StudentEntity implements Serializable {
     public void setClassEntity(ClassEntity classEntity) {
         this.classEntity = classEntity;
     }
+
+    @Override
+    public String toString() {
+        return "StudentEntity{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", sex=" + sex +
+                ", borthday=" + borthday +
+                ", registrationDate=" + registrationDate +
+                ", classEntity=" + classEntity +
+                '}';
+    }
 }

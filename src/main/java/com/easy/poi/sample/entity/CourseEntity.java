@@ -68,4 +68,15 @@ public class CourseEntity implements Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
+    @Override
+    public String toString() {
+        return "CourseEntity{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", majorTeacher=" + majorTeacher +
+                ", absentTeacher=" + absentTeacher +
+                ", students=" + students +
+                '}';
+    }
 }
