@@ -2,6 +2,7 @@ package com.easy.poi.sample.controller;
 
 import cn.afterturn.easypoi.excel.ExcelImportUtil;
 import cn.afterturn.easypoi.excel.entity.ImportParams;
+import com.easy.poi.sample.entity.ClassName;
 import com.easy.poi.sample.entity.CourseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -51,5 +52,22 @@ public class ImportController {
         }
         return "OK";
     }
-
+    @RequestMapping(value = "uploadClassNameExcel")
+    public @ResponseBody
+    String uploadClassNameExcel(HttpServletRequest request){
+        try {
+            MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
+            MultipartFile multipartFile = multipartRequest.getFile("excel");
+            if (multipartFile != null){
+                ImportParams params = new ImportParams();
+                params.setHeadRows(2);
+                InputStream is = multipartFile.getInputStream();
+                List<ClassName> list = ExcelImportUtil.importExcel(is, ClassName.class,params);
+                System.out.println(list);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "OK";
+    }
 }

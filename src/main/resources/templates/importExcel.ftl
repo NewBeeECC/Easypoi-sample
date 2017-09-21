@@ -11,5 +11,11 @@
 
     <p><input type="submit" value="上传"/></p>
 </form>
+<form method="POST" enctype="multipart/form-data" action="/uploadClassNameExcel">
+
+    <p>营业执照：<input type="file" name="excel" /></p>
+
+    <p><input type="submit" value="上传"/></p>
+</form>
 </body>
 </html>
